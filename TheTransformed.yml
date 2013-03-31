@@ -1,0 +1,157 @@
+Bosses:
+  tStart:
+    Type: villager
+    Health: 20
+    Damage: 0
+    Skills:
+    - command eb_boss_killtype_LostVillager =10 1
+    - command eb_boss_spawn_LostVillager_sc1 =10 1
+  NilesParker:
+    Type: villager
+    Health: 5
+    Showhp: true
+    Damage: 0
+    Skills:
+    - bossmsg 25:&7psst..Traveller..over_here! =5 1
+    - bossmsg 25:&7for_a_start_keep_your_voices_down!_you_do_not_want_to_wake_them =1 1
+    - command eb_boss_spawn_TransformedVillager_sc1 =0 1
+  TransformedVillager:
+    Type: zombievillager
+    Health: 200
+    Showhp: true
+    Damage: 5
+    Skills: 
+    - bossmsg 25:&aI_have_Awoken,_&bNow_feel_my_&cpain! =200 1
+    - bossmsg 25:&bDont_&clook_&bat_Me! =175 1
+    - throw 5:2 =175 1
+    - bossmsg 25:&2My_Children_&cLive =150 1
+    - swarm zombiebaby:4 =150 1
+    - bossmsg 25:&bDont_&clook_&bat_Me! =50 1
+    - throw 5:2 =125 1
+    - bossmsg 25:&2My_Children_&cLive =100 1
+    - swarm zombiebaby:2 =100 1
+    - bossmsg 25:&bDont_&clook_&bat_Me! =75 1
+    - throw 5:2 =75 1
+    - bossmsg 25:&2My_Children_&cLive =50 1
+    - swarm zombiebaby:2 =50 1
+    - bossmsg 25:&bDont_&clook_&bat_Me! =25 1
+    - throw 5:2 =25 1
+    - bossmsg 25:&bI_am_&cFree! =1 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    - command eb_boss_spawn_TVcow_sc1 =0 1
+  TVcow:
+    Type: cow
+    Health: 20
+    Damage: 0
+    Drops:
+    - 257:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Niles'_Efficient_Pick
+    - exp 100
+    - 303:0:1 0.4 DURABILITY:4, $&aNiles'_Enchanted_Chain_Chest
+    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
+  Rob:
+    Type: villager
+    Health: 20
+    Damage: 0
+    Skills:
+    - bossmsg 25:&bWhere_have_my_friends_gone? =19 1
+    - command eb_boss_spawn_RobTransformed_sc2 =0 1
+  RobTransformed:
+    Type: zombiebaby
+    Health: 125
+    Showhp: true
+    Damage: 2
+    Skills:
+    - bossmsg 25:&bOh_wait_there_they_are! =50 1
+    - command eb_boss_spawn_rf1_sc2-1 =50 1
+    - command eb_boss_spawn_rf2_sc2-2 =50 1
+    - command eb_boss_spawn_rf3_sc2-3 =50 1
+    - command eb_boss_spawn_rf4_sc2-4 =50 1
+    - bossmsg 25:&bYou_Will_Be_Joining_Them_&cSoon_Enough&f! =50 1
+    - command eb_boss_spawn_RobEnraged_sc2 =0 1
+  RobEnraged:
+    Type: zombie
+    Health: 125
+    Showhp: true
+    Damage: 5
+    Skills:
+    - bossmsg 25:&bJoin_&cUs&f! =50 1
+    - potionboss INCREASE_DAMAGE:30:1 =125 1
+    - potion 20:INCREASE_DAMAGE:30:3 =125 1
+    - command eb_boss_spawn_RobCow_sc2 =0 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+  rf1:
+    Type: zombiebaby
+    Health: 20
+    Damage: 2
+    Skills:
+    - command eb_boss_spawn_rf1_sc2-1 =0 0.2
+  rf2:
+    Type: zombiebaby
+    Health: 20
+    Damage: 2
+    Skills:
+    - command eb_boss_spawn_rf1_sc2-2 =0 0.2
+  rf3:
+    Type: zombiebaby
+    Health: 20
+    Damage: 2
+    Skills:
+    - command eb_boss_spawn_rf1_sc2-3 =0 0.2
+  rf4:
+    Type: zombiebaby
+    Health: 20
+    Damage: 2
+    Skills:
+    - command eb_boss_spawn_rf1_sc2-4 =0 0.2
+  RobCow:
+    Type: cow
+    Health: 20
+    Damage: 0
+    Drops:
+    - 258:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Robs_Efficient_Axe
+    - exp 125
+    - 304:0:1 0.4 DURABILITY:4, $&aRobs_Enchanted_Chain_Leggings
+    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
+  SCZombie:
+    Type: zombie
+    Health: 50
+    Damage: 4
+    Drops:
+    - exp 25
+    - 267:0:1 0.01 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
+    - 403:0:1 0.01 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive  
+  NecroGuard:
+    Type: irongolem
+    Health: 1000
+    Showhp: true
+    Damage: 2
+    Skills:
+    - bossmsg 25:&bThe_Necromancer_Does_Not_Wish_to_&cBE_DISTURBED =999 1
+    - bossmsg 25:&bYou_Have_Been_&cWarned =909 1
+    - throw 5:1 =900 1
+    - bossmsg 25:&bYou_Have_Been_&cWarned =709 1
+    - potionboss INCREASE_DAMAGE:10:1 <500 0.1
+    - throw 5:1 =700 1
+    - throw 5:1 =300 1
+    - bossmsg 25:&cLeave_This_Place&7! =310 1
+    - throw 5:2 =100 1
+    - bossmsg 25:&cLeave_This_Place&7! =110 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    - command eb_boss_spawn_GuardCow_sc-t1 =0 1
+  GuardCow:
+    Type: cow
+    Health: 20
+    Damage: 0
+    Drops:
+    - 302:0:1 0.4 DURABILITY:4 $&aGuards_Chain_Helm
+    - 305:0:1 0.4 DURABILITY:4 $&aGuards_Chain_Boots
+    - 302:0:1 0.1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Helm
+    - 305:0:1 0.1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Boots
+    - 373:8257:5 0.4
+    - 373:8257:5 0.4
+    - 373:8257:5 0.4
+    - 373:8257:5 0.4
+    - 373:16453:5 0.4
+    - 373:16453:5 0.4
+    - 373:16457:5 0.4
+    - exp 200
