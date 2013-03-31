@@ -39,15 +39,6 @@ Bosses:
     - bossmsg 25:&bI_am_&cFree! =1 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_TVcow_sc1 =0 1
-  TVcow:
-    Type: cow
-    Health: 20
-    Damage: 0
-    Drops:
-    - 257:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Niles'_Efficient_Pick
-    - exp 100
-    - 303:0:1 0.4 DURABILITY:4, $&aNiles'_Enchanted_Chain_Chest
-    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
   Rob:
     Type: villager
     Health: 20
@@ -103,15 +94,6 @@ Bosses:
     Damage: 2
     Skills:
     - command eb_boss_spawn_rf1_sc2-4 =0 0.2
-  RobCow:
-    Type: cow
-    Health: 20
-    Damage: 0
-    Drops:
-    - 258:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Robs_Efficient_Axe
-    - exp 125
-    - 304:0:1 0.4 DURABILITY:4, $&aRobs_Enchanted_Chain_Leggings
-    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
   SCZombie:
     Type: zombie
     Health: 50
@@ -138,11 +120,30 @@ Bosses:
     - bossmsg 25:&cLeave_This_Place&7! =110 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_GuardCow_sc-t1 =0 1
+  RobCow:
+    Type: cow
+    Health: 20
+    Damage: 0
+    Drops:
+    - exp 125
+    - 258:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Robs_Efficient_Axe
+    - 304:0:1 0.4 DURABILITY:4, $&aRobs_Enchanted_Chain_Leggings
+    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
+  TVcow:
+    Type: cow
+    Health: 20
+    Damage: 0
+    Drops:
+    - exp 100
+    - 257:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Niles'_Efficient_Pick
+    - 303:0:1 0.4 DURABILITY:4, $&aNiles'_Enchanted_Chain_Chest
+    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
   GuardCow:
     Type: cow
     Health: 20
     Damage: 0
     Drops:
+    - exp 200
     - 302:0:1 0.4 DURABILITY:4 $&aGuards_Chain_Helm
     - 305:0:1 0.4 DURABILITY:4 $&aGuards_Chain_Boots
     - 302:0:1 0.1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Helm
@@ -154,4 +155,14 @@ Bosses:
     - 373:16453:5 0.4
     - 373:16453:5 0.4
     - 373:16457:5 0.4
-    - exp 200
+  AllTransformedloot:
+    - 302:0:1 1 DURABILITY:4 $&aGuards_Chain_Helm
+    - 305:0:1 1 DURABILITY:4 $&aGuards_Chain_Boots
+    - 302:0:1 1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Helm
+    - 305:0:1 1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Boots
+    - 257:0:1 1 DURABILITY:4,DIG_SPEED:3 $&9Niles'_Efficient_Pick
+    - 303:0:1 1 DURABILITY:4, $&aNiles'_Enchanted_Chain_Chest
+    - 267:0:1 1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
+    - 258:0:1 1 DURABILITY:4,DIG_SPEED:3 $&9Robs_Efficient_Axe
+    - 304:0:1 1 DURABILITY:4, $&aRobs_Enchanted_Chain_Leggings
+    - 403:0:1 1 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive  
