@@ -101,8 +101,7 @@ Bosses:
     Drops:
     - exp 25
     - 267:0:1 0.01 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
-    - 403:0:1 0.01 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive  
-  NecroGuard:
+    - 403:0:1 0.01 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive   NecroGuard:
     Type: irongolem
     Health: 1000
     Showhp: true
@@ -120,6 +119,30 @@ Bosses:
     - bossmsg 25:&cLeave_This_Place&7! =110 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_GuardCow_sc-t1 =0 1
+    - command eb_boss_spawn_Necro_sc-t2 =0 1
+  Necro:
+    Type: witch
+    Health: 800
+    Showhp: true
+    Damage: 5
+    Skills:
+    - bossmsg 25:&bMore_Subjects! =799 1
+    - bossmsg 25:&bYou_will_&bjoin_&cus! =599 1
+    - bossmsg 25:&bYour_fate_is_&bSealed! =399 1
+    - bossmsg 25:&bThis_cant_be_&bHappening! =199 1
+    - dragin 20 =790 1
+    - dragin 20 =590 1
+    - dragin 20 =390 1
+    - dragin 20 =190 1
+    - potionboss SPEED:30:4 >0 0.5
+    - swarm skeleton:1 >500 0.1
+    - swarm zombie:1 >500 0.1
+    - swarm witherskeleton:1 >500 0.1
+    - swarm skeleton:2 <500 0.1
+    - swarm zombie:2 <500 0.1
+    - swarm witherskeleton:2 <500 0.1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    - command eb_boss_spawn_NecroCow_sc-t2 =0 1
   RobCow:
     Type: cow
     Health: 20
@@ -154,8 +177,34 @@ Bosses:
     - 373:8257:5 0.4
     - 373:16453:5 0.4
     - 373:16453:5 0.4
-    - 373:16457:5 0.4
+    - 373:16457:5 0.4  
+  NecroCow:
+    Type: cow
+    Health: 20
+    Damage: 0
+    Drops:
+    - 302:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,OXYGEN:3 $&dHelm_of_Lost_Souls
+    - 303:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,THORNS:3 $&dChest_of_Broken_Hearts
+    - 304:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,WATER_WORKER:3 $&dLeggings_of_the_Stolen
+    - 305:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,PROTECTION_FALL:3 $&dBoots_of_the_Forgotten
+    - 384:0:5 1
+    - 403:0:1 0.4 OXYGEN:3
+    - 403:0:1 0.4 THORNS:3
+    - 403:0:1 0.4 WATER_WORKER:3
+    - 403:0:1 0.4 PROTECTION_FALL:3
+    - 403:0:1 0.4 DURABILITY:4
+    - exp 500
   AllTransformedloot:
+    - 302:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,OXYGEN:3 $&dHelm_of_Lost_Souls
+    - 303:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,THORNS:3 $&dChest_of_Broken_Hearts
+    - 304:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,WATER_WORKER:3 $&dLeggings_of_the_Stolen
+    - 305:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,PROTECTION_FALL:3 $&dBoots_of_the_Forgotten
+    - 384:0:5 1
+    - 403:0:1 1 OXYGEN:3
+    - 403:0:1 1 THORNS:3
+    - 403:0:1 1 WATER_WORKER:3
+    - 403:0:1 1 PROTECTION_FALL:3
+    - 403:0:1 1 DURABILITY:4
     - 302:0:1 1 DURABILITY:4 $&aGuards_Chain_Helm
     - 305:0:1 1 DURABILITY:4 $&aGuards_Chain_Boots
     - 302:0:1 1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Helm
