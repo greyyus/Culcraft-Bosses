@@ -2,7 +2,7 @@ Bosses:
   Hunter:
     Type: skeleton
     Health: 150
-    Showhp: true
+    Showhp: false
     Damage: 5
     Skills:
     - dragin 20 =140 1
@@ -11,18 +11,12 @@ Bosses:
     - command eb_boss_spawn_Henchman_c2 =0 1
     Drops:
     - 261:0:1:0 0 ARROW_DAMAGE:2,ARROW_KNOCKBACK:1 $&ano_drop_bow
-    - 261:0:1 0.1 ARROW_DAMAGE:2,DURABILITY:2 $&aBow_of_Power_+2
-    - 262:0:10 0.7
-    - 298:255,255,255:1:4 0.05 PROTECTION_PROJECTILE:4 $&aSkeletons_Leather_Cap
-    - 301:255,255,255:1:1 0.05 PROTECTION_PROJECTILE:4 $&aSkeletons_Leather_Boots
-    - 307:0:1 0.01 PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,THORNS:2 $&dGlowing_Iron_Chest
-    - 309:0:1 0.01 DURABILITY:4,PROTECTION_ENVIRONMENTAL:3,THORNS:2 $&dGlowing_Iron_Boots
-    - 267:0:1 0.01 DAMAGE_ALL:4,DURABILITY:4,FIRE_ASPECT:3 $&dSharp_Blade_of_Fire
-    - exp 50
+    - 298:255,255,255:1:4 0 PROTECTION_PROJECTILE:4 $&ano_drop_helm
+    - 301:255,255,255:1:1 0 PROTECTION_PROJECTILE:4 $&ano_drop_Boots
   Henchman:
     Type: zombie
     Health: 250
-    Showhp: true
+    Showhp: false
     Damage: 7
     Skills:
     - dragin 20 =220 1
@@ -42,7 +36,7 @@ Bosses:
   Brewer:
     Type: witch
     Health: 200
-    Showhp: true
+    Showhp: false
     Damage: 3
     Skills:
     - dragin 20 =190 1
@@ -59,38 +53,43 @@ Bosses:
   SpiderQueen:
     Type: spider
     Health: 400
-    Showhp: true
+    Showhp: false
     Damage: 7
     Skills:
     - effect ender
     - dragin 20 >200 0.1
     - potion 20:SLOW:15:2 >0 0.3
     - bossmsg 25:&bCome_closer,_it's_time_for._._._&2Lunch! =150 1
-    - dragin 25 =150 1
-    - potion 20:POISON:5:1 =150 1
+    - dragin 40 =150 1
+    - potion 40:POISON:5:2 <150 0.2
     - swarm spider:2 =150 1
+    - dragin 40 =100 1
     - swarm spider:2 =75 1
+    - dragin 40 =50 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_SpiderCow_cl4 =0 1
   ThreeFingerHobb:
     Type: witherskeleton
     Health: 400
-    Showhp: true
+    Showhp: false
     Damage: 9
     Skills:
-    - dragin 20 =390 1
+    - dragin 40 =390 1
     - effect fire
     - bossmsg 25:&bDinner_is_&2served =375 1
     - bossmsg 25:&bDinner_is_&2served =175 1
     - bossmsg 25:&bDinner_is_&2served =75 1
     - potion 20:CONFUSION:15:2 =325 1
+    - dragin 40 =330 1
     - bossmsg 25:&bI_hope_you_are_&2feeling_okay&b! =325 1
+    - dragin 40 =130 1
     - potion 20:CONFUSION:15:2 =125 1
     - bossmsg 25:&bI_hope_you_are_&2feeling_okay&b! =125 1
+    - dragin 40 =90 1
     - potionboss INCREASE_DAMAGE:30:1 =85 1
-    - bossmsg 25:&bHere_comes_the_&2Pain&b! =85 1
+    - bossmsg 25:&bHere_comes_the_&2Pain&b! =95 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
-    - command eb_boss_spawn_$HobbCow_cl2 =0 1
+    - command eb_boss_spawn_HobbCow_cl2 =0 1
     Drops:
     - 273:0:1:0 0 DURABILITY:4 $&no_drop_shovel
     - 306:0:1:4 0 DURABILITY:2,PROTECTION_FIRE:1 $&aChefs_Hat_noDrop
@@ -108,27 +107,14 @@ Bosses:
     Damage: 5
     Drops:
     - 261:0:1:0 0 ARROW_DAMAGE:2,ARROW_KNOCKBACK:1 $&ano_drop_bow
-    - 261:0:1 0.1 ARROW_DAMAGE:2,DURABILITY:2 $&aBow_of_Power_+2
-    - 262:0:10 0.7
-    - 298:255,255,255:1:4 0.05 PROTECTION_PROJECTILE:4 $&aSkeletons_Leather_Cap
-    - 301:255,255,255:1:1 0.05 PROTECTION_PROJECTILE:4 $&aSkeletons_Leather_Boots
-    - exp 50
+    - 298:255,255,255:1:4 0 PROTECTION_PROJECTILE:4 $&ano_drop_helm
+    - 301:255,255,255:1:1 0 PROTECTION_PROJECTILE:4 $&ano_drop_Boots
   HenchCow:
     Type: cow
     Health: 20
     Damage: 1
     Skills:
     - command eb_boss_spawn_ThreeFingerHobb_c3 =0 1
-    Drops:
-    - 267:0:1 0.2 DAMAGE_ALL:2,DURABILITY:2 $&9Henchmans_Sharp_Blade
-    - 258:0:1 0.2 KNOCKBACK:2,DAMAGE_ALL:2 $&9Large_Axe_of_Knockback
-    - 272:0:1 0.3 DURABILITY:4,FIRE_ASPECT:1 $&aStone_Fire_Poker
-    - 307:0:1 0.01 PROTECTION_ENVIRONMENTAL:4,DURABILITY:2 $&9Iron_Chest_of_Lasting
-    - 309:0:1 0.3 PROTECTION_ENVIRONMENTAL:2 $&aIron_Boots_+2
-    - 307:0:1 0.02 PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,THORNS:2 $&dGlowing_Iron_Chest
-    - 309:0:1 0.02 DURABILITY:4,PROTECTION_ENVIRONMENTAL:3,THORNS:2 $&dGlowing_Iron_Boots
-    - 267:0:1 0.02 DAMAGE_ALL:4,DURABILITY:4,FIRE_ASPECT:3 $&dSharp_Blade_of_Fire
-    - exp 250
   BrewerCow:
     Type: cow
     Health: 20
@@ -136,9 +122,6 @@ Bosses:
     Skills:
     - command eb_boss_spawn_SpiderQueen_c5 =0 1
     Drops:
-    - 298:0:1 0.3 PROTECTION_FIRE:2,PROTECTION_ENVIRONMENTAL:2,DURABILITY:2 $&9Leather_Cap_of_Arcane
-    - 280:0:1 0.1 DIG_SPEED:10,KNOCKBACK:2,DAMAGE_ALL:2 $&9Brewers_Wooden_Sceptre
-    - 307:0:1 0.3 PROTECTION_FIRE:2,PROTECTION_ENVIRONMENTAL:2,DURABILITY:2 $&9Iron_Chest_of_Arcane_Protection
     - 373:16385:2 0.5
     - 373:16386:2 0.5
     - 373:16385:2 0.5
@@ -147,42 +130,16 @@ Bosses:
     - 373:16386:2 0.5
     - 373:16385:2 0.5
     - 373:16386:2 0.5
-    - 307:0:1 0.04 PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,THORNS:2 $&dGlowing_Iron_Chest
-    - 309:0:1 0.04 DURABILITY:4,PROTECTION_ENVIRONMENTAL:3,THORNS:2 $&dGlowing_Iron_Boots
-    - 267:0:1 0.02 DAMAGE_ALL:4,DURABILITY:4,FIRE_ASPECT:3 $&dSharp_Blade_of_Fire
-    - exp 400
   SpiderCow:
     Type: cow
     Health: 20
     Damage: 1
-    Drops:
-    - 299:200,200,200:1 0.3 PROTECTION_ENVIRONMENTAL:4,DURABILITY:4,THORNS:2 $&9White_Leather_Chest_of_Thorns_+2
-    - 276:0:1 0.3 DAMAGE_ARTHROPODS:2,LOOT_BONUS_MOBS:2 $&9Spider_Queens_Crystal_Fang
-    - 300:200,200,200:1 0.3 PROTECTION_ENVIRONMENTAL:4,DURABILITY:4,THORNS:2 $&9White_Leather_Leggings_of_Thorns_+2
-    - 307:0:1 0.05 PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,THORNS:2 $&dGlowing_Iron_Chest
-    - 309:0:1 0.05 DURABILITY:4,PROTECTION_ENVIRONMENTAL:3,THORNS:2 $&dGlowing_Iron_Boots
-    - 267:0:1 0.02 DAMAGE_ALL:4,DURABILITY:4,FIRE_ASPECT:3 $&dSharp_Blade_of_Fire
-    - exp 400
   HobbCow:
     Type: cow
     Health: 20
     Damage: 1
     Skills:
     - command eb_boss_spawn_Brewer_c4 =0 1
-    Drops:
-    - 273:0:1 0.3 DURABILITY:4,FIRE_ASPECT:2,DIG_SPEED:3 $&9Hobbs_Fourth_Finger
-    - 306:0:1 0.4 DURABILITY:2,PROTECTION_FIRE:1 $&aChefs_Hat
-    - 308:0:1 0.4 DURABILITY:2,PROTECTION_FIRE:1 $&aChefs_Pants
-    - 322:0:1 0.5
-    - 322:0:1 0.5
-    - 322:0:1 0.5
-    - 322:0:1 0.5
-    - 322:1:1 0.5
-    - 322:1:1 0.5
-    - 307:0:1 0.03 PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,THORNS:2 $&dGlowing_Iron_Chest
-    - 309:0:1 0.03 DURABILITY:4,PROTECTION_ENVIRONMENTAL:3,THORNS:2 $&dGlowing_Iron_Boots
-    - 267:0:1 0.05 DAMAGE_ALL:4,DURABILITY:4,FIRE_ASPECT:3 $&dSharp_Blade_of_Fire
-    - exp 400
   cStart:
     Type: villager
     Health: 20
@@ -225,8 +182,6 @@ Bosses:
     - 261:0:1 1 ARROW_DAMAGE:2,DURABILITY:2 $&aBow_of_Power_+2
     - 267:0:1 1 DAMAGE_ALL:4,DURABILITY:4,FIRE_ASPECT:3 $&dSharp_Blade_of_Fire
     - 273:0:1 1 DURABILITY:4,FIRE_ASPECT:2,DIG_SPEED:3 $&9Hobbs_Fourth_Finger
-  
-  
   tStart:
     Type: villager
     Health: 20
@@ -237,7 +192,7 @@ Bosses:
   NilesParker:
     Type: villager
     Health: 5
-    Showhp: true
+    Showhp: false
     Damage: 0
     Skills:
     - bossmsg 25:&7psst..Traveller..over_here! =5 1
@@ -246,9 +201,9 @@ Bosses:
   TransformedVillager:
     Type: zombievillager
     Health: 200
-    Showhp: true
+    Showhp: false
     Damage: 5
-    Skills: 
+    Skills:
     - bossmsg 25:&aI_have_Awoken,_&bNow_feel_my_&cpain! =200 1
     - bossmsg 25:&bDont_&clook_&bat_Me! =175 1
     - throw 5:2 =175 1
@@ -267,6 +222,10 @@ Bosses:
     - bossmsg 25:&bI_am_&cFree! =1 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_TVcow_sc1 =0 1
+  TVcow:
+    Type: cow
+    Health: 20
+    Damage: 0
   Rob:
     Type: villager
     Health: 20
@@ -277,23 +236,27 @@ Bosses:
   RobTransformed:
     Type: zombiebaby
     Health: 125
-    Showhp: true
+    Showhp: false
     Damage: 2
     Skills:
     - bossmsg 25:&bOh_wait_there_they_are! =50 1
     - command eb_boss_spawn_rf1_sc2-1 =50 1
-    - command eb_boss_spawn_rf2_sc2-2 =50 1
-    - command eb_boss_spawn_rf3_sc2-3 =50 1
-    - command eb_boss_spawn_rf4_sc2-4 =50 1
+    - command eb_boss_spawn_rf1_sc2-2 =50 1
+    - command eb_boss_spawn_rf1_sc2-3 =50 1
+    - command eb_boss_spawn_rf1_sc2-4 =50 1
     - bossmsg 25:&bYou_Will_Be_Joining_Them_&cSoon_Enough&f! =50 1
     - command eb_boss_spawn_RobEnraged_sc2 =0 1
   RobEnraged:
     Type: zombie
     Health: 125
-    Showhp: true
+    Showhp: false
     Damage: 5
     Skills:
     - bossmsg 25:&bJoin_&cUs&f! =50 1
+    - command eb_boss_spawn_rf1_sc2-1 =50 1
+    - command eb_boss_spawn_rf1_sc2-2 =50 1
+    - command eb_boss_spawn_rf1_sc2-3 =50 1
+    - command eb_boss_spawn_rf1_sc2-4 =50 1
     - potionboss INCREASE_DAMAGE:30:1 =125 1
     - potion 20:INCREASE_DAMAGE:30:3 =125 1
     - command eb_boss_spawn_RobCow_sc2 =0 1
@@ -302,40 +265,24 @@ Bosses:
     Type: zombiebaby
     Health: 20
     Damage: 2
-    Skills:
-    - command eb_boss_spawn_rf1_sc2-1 =0 0.2
-  rf2:
-    Type: zombiebaby
+  RobCow:
+    Type: cow
     Health: 20
-    Damage: 2
-    Skills:
-    - command eb_boss_spawn_rf1_sc2-2 =0 0.2
-  rf3:
-    Type: zombiebaby
-    Health: 20
-    Damage: 2
-    Skills:
-    - command eb_boss_spawn_rf1_sc2-3 =0 0.2
-  rf4:
-    Type: zombiebaby
-    Health: 20
-    Damage: 2
-    Skills:
-    - command eb_boss_spawn_rf1_sc2-4 =0 0.2
+    Damage: 0
+    Drops:
+    - exp 125
   SCZombie:
     Type: zombie
     Health: 50
     Damage: 4
-    Drops:
-    - exp 25
-    - 267:0:1 0.01 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
-    - 403:0:1 0.01 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive  
   NecroGuard:
     Type: irongolem
     Health: 1000
-    Showhp: true
+    Showhp: false
     Damage: 2
     Skills:
+    - command eb_boss_killtype_Necro =1000 1
+    - dragin 20 =790 1
     - bossmsg 25:&bThe_Necromancer_Does_Not_Wish_to_&cBE_DISTURBED =999 1
     - bossmsg 25:&bYou_Have_Been_&cWarned =909 1
     - throw 5:1 =900 1
@@ -349,10 +296,14 @@ Bosses:
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_GuardCow_sc-t1 =0 1
     - command eb_boss_spawn_Necro_sc-t2 =0 1
+  GuardCow:
+    Type: cow
+    Health: 20
+    Damage: 0
   Necro:
     Type: witch
     Health: 800
-    Showhp: true
+    Showhp: false
     Damage: 5
     Skills:
     - bossmsg 25:&bMore_Subjects! =799 1
@@ -372,58 +323,18 @@ Bosses:
     - swarm witherskeleton:2 <500 0.1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_NecroCow_sc-t2 =0 1
-  RobCow:
-    Type: cow
-    Health: 20
-    Damage: 0
-    Drops:
-    - exp 125
-    - 258:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Robs_Efficient_Axe
-    - 304:0:1 0.4 DURABILITY:4, $&aRobs_Enchanted_Chain_Leggings
-    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
-  TVcow:
-    Type: cow
-    Health: 20
-    Damage: 0
-    Drops:
-    - exp 100
-    - 257:0:1 0.2 DURABILITY:4,DIG_SPEED:3 $&9Niles'_Efficient_Pick
-    - 303:0:1 0.4 DURABILITY:4, $&aNiles'_Enchanted_Chain_Chest
-    - 267:0:1 0.1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
-  GuardCow:
-    Type: cow
-    Health: 20
-    Damage: 0
-    Drops:
-    - exp 200
-    - 302:0:1 0.4 DURABILITY:4 $&aGuards_Chain_Helm
-    - 305:0:1 0.4 DURABILITY:4 $&aGuards_Chain_Boots
-    - 302:0:1 0.1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Helm
-    - 305:0:1 0.1 DURABILITY:4,PROTECTION_FALL:5,THORNS:2 $&9Guards_Rare_Boots
-    - 373:8257:5 0.4
-    - 373:8257:5 0.4
-    - 373:8257:5 0.4
-    - 373:8257:5 0.4
-    - 373:16453:5 0.4
-    - 373:16453:5 0.4
-    - 373:16457:5 0.4  
   NecroCow:
     Type: cow
     Health: 20
     Damage: 0
+  AllTv:
+    Type: cow
+    Health: 5
+    Damage: 0
     Drops:
-    - 302:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,OXYGEN:3 $&dHelm_of_Lost_Souls
-    - 303:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,THORNS:3 $&dChest_of_Broken_Hearts
-    - 304:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,WATER_WORKER:3 $&dLeggings_of_the_Stolen
-    - 305:0:1 0.1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,PROTECTION_FALL:3 $&dBoots_of_the_Forgotten
-    - 384:0:5 1
-    - 403:0:1 0.4 OXYGEN:3
-    - 403:0:1 0.4 THORNS:3
-    - 403:0:1 0.4 WATER_WORKER:3
-    - 403:0:1 0.4 PROTECTION_FALL:3
-    - 403:0:1 0.4 DURABILITY:4
-    - exp 500
-  AllTransformedloot:
+    - 373:8257:5 1
+    - 373:16453:5 1
+    - 373:16457:5 1
     - 302:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,OXYGEN:3 $&dHelm_of_Lost_Souls
     - 303:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,THORNS:3 $&dChest_of_Broken_Hearts
     - 304:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:8,WATER_WORKER:3 $&dLeggings_of_the_Stolen
@@ -443,4 +354,199 @@ Bosses:
     - 267:0:1 1 DAMAGE_UNDEAD:5,DURABILITY:2 $&9Bane_of_the_Transformed
     - 258:0:1 1 DURABILITY:4,DIG_SPEED:3 $&9Robs_Efficient_Axe
     - 304:0:1 1 DURABILITY:4, $&aRobs_Enchanted_Chain_Leggings
-    - 403:0:1 1 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive  
+    - 403:0:1 1 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive
+  WitherBoss:
+    Type: creeper
+    Health: 120
+    Showhp: false
+    Damage: 0
+  Cow:
+    Type: cow
+    Health: 5
+    Damage: 0
+  Sheep:
+    Type: sheep
+    Health: 5
+    Damage: 0
+  WarVil:
+    Type: villager
+    Health: 20
+    Damage: 0
+    Skills:
+    - command eb_boss_killtype_GateKeeper =10 1
+    - command eb_boss_killtype_GateArcher =10 1
+    - command eb_boss_killtype_MasterOfArms =10 1
+    - command eb_boss_killtype_AngryMasterOfArms =10 1
+    - command eb_boss_killtype_EnragedMasterOfArms =10 1
+    - command eb_boss_killtype_WarlordsAlchemist =10 1
+    - command eb_boss_killtype_AlchemistsTrueForm =10 1
+    - command eb_boss_killtype_Warlord =10 1
+    - command eb_boss_killtype_WarDog =10 1
+    - command eb_boss_killtype_GateCow =10 1
+    - command eb_boss_killtype_MoaCow =10 1
+    - command eb_boss_killtype_AlcCow =10 1
+    - command eb_boss_killtype_WarCow =10 1
+    - command eb_boss_spawn_GateKeeper_wl-gate-b =0 1
+  GateKeeper:
+    Type: zombie
+    Health: 1250
+    Showhp: false
+    Damage: 10
+    Skills:
+    - command eb_boss_spawn_GateArcher_wl-gate-b-a1 =1240 1
+    - command eb_boss_spawn_GateArcher_wl-gate-b-a2 =1240 1
+    - potionboss SPEED:300:5 =500 1
+    - potionboss INCREASE_DAMAGE:300:5 =500 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    - command eb_boss_spawn_GateCow_wl-gate-b =0 1
+    Drops:
+    - 272:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+  GateArcher:
+    Type: skeleton
+    Health: 300
+    Damage: 1
+    Skills:
+    - potionboss SPEED:300:5 =150 1
+    - potionboss INCREASE_DAMAGE:300:5 =150 1
+    Drops:
+    - 261:0:1:0 0 ARROW_DAMAGE:2,ARROW_FIRE:1 $&ano_drop_bow
+    - 298:20,20,255:1:4 0
+    - 299:20,20,255:1:3 0
+    - 300:20,20,255:1:2 0
+    - 301:20,20,255:1:1 0
+  GateCow:
+    Type: cow
+    Health: 2
+    Damage: 5
+    Skills:
+    - command eb_boss_spawn_MasterOfArms_wl-arm =0 1
+  WallArcher:
+    Type: skeleton
+    Health: 150
+    Damage: 1
+    Skills:
+    - potionboss SPEED:300:5 =150 1
+    - potionboss INCREASE_DAMAGE:300:5 =150 1
+    Drops:
+    - 261:0:1:0 0 ARROW_DAMAGE:2 $&ano_drop_bow
+    - 298:50,50,200:1:4 0
+    - 299:50,50,200:1:3 0
+    - 300:50,50,200:1:2 0
+    - 301:50,50,200:1:1 0
+  MasterOfArms:
+    Type: zombie
+    Damage: 5
+    Health: 200
+    Showhp: false
+    Skills:
+    - swarm $AngryMasterOfArms:1 =0 1
+    - potionboss SPEED:300:1 =199 1
+    Drops:
+    - 272:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+    - 308:0:1:2 0
+  AngryMasterOfArms:
+    Type: zombie
+    Damage: 10
+    Health: 200
+    Showhp: false
+    Skills:
+    - swarm $EnragedMasterOfArms:1 =0 1
+    - potionboss SPEED:300:5 =199 1
+    Drops:
+    - 258:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+    - 308:0:1:2 0
+  EnragedMasterOfArms:
+    Type: zombie
+    Damage: 15
+    Health: 600
+    Showhp: false
+    Skills:
+    - command eb_boss_spawn_MoaCow_wl-arm =0 1
+    - potionboss SPEED:300:5 =500 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    Drops:
+    - 267:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+    - 308:0:1:2 0
+  MoaCow:
+    Type: cow
+    Health: 2
+    Damage: 5
+    Skills:
+    - command eb_boss_spawn_WarlordsAlchemist_wl-alc-b =0 1
+  WarlordsAlchemist:
+    Type: witch
+    Damage: 2
+    Health: 50
+    Showhp: false
+    Skills:
+    - swarm $AlchemistsTrueForm:1 =0 1
+  AlchemistsTrueForm:
+    Type: blaze
+    Damage: 10
+    Health: 1000
+    Showhp: false
+    Skills:
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    - command eb_boss_spawn_AlcCow_wl-alc =0 1
+    - lightning 5:5 >500 0.3
+    - lightning 5:8 <500 0.3
+  AlcCow:
+    Type: cow
+    Damage: 0
+    Health: 20
+    Skills:
+    - command eb_boss_spawn_Warlord_wl-lord-b =0 1
+  Warlord:
+    Type: pigzombie
+    Health: 1500
+    Damage: 15
+    Skills:
+    - swarm $WarDog:2 =1499 1
+    - swarm $WarDog:2 =699 1
+    - bossmsg 0:&b$player_has_killed_the_&4$boss! =0 1
+    - command eb_boss_spawn_WarCow_wl-lord-b =0 1
+    Drops:
+    - 267:0:1:0 0 $&anodropsword
+    - 306:0:1:4 0 $&anodrophelm
+    - 307:0:1:3 0 $&anodropchest
+  WarDog:
+    Type: angrywolf
+    Damage: 5
+    Health: 100
+    Drops:
+    - exp 50
+  WarCow:
+    Type: cow
+    Damage: 0
+    Health: 20
+  EscapedConvict:
+    Type: zombie
+    Health: 250
+    Damage: 5
+    Skills:
+    - bossmsg 0:&9$player_&2has_found_an_&b$boss! =240 1
+    - bossmsg 25:&aYou_will_&cNOT_&aSend_me_back_&b$player! =100 1
+    - bossmsg 25:&aIt_will_&cNOT_&aend_like_&3THIS! =25 1
+    - swarm $Convict:1 =0 0.6
+    Drops:
+    - exp 100
+    - 267:0:1:0 0 $&anodropsword
+    - 306:0:1:4 0 $&anodrophelm
+    - 307:0:1:3 0 $&anodropchest
+  Convict:
+    Type: cow
+    Health: 2
+    Damage: 0
+  tCow:
+    Type: cow
+    Health: 2
+    Damage: 0
+    Drops:
