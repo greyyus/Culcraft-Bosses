@@ -1,15 +1,39 @@
+#cave 5 bosses. started with single villager
 Bosses:
+#cstart clears all bosses then spawns the hunter
+  cStart:
+    Type: villager
+    Health: 20
+    Damage: 0
+    Skills:
+    - command eb_boss_killtype_Hunter =10 1
+    - command eb_boss_killtype_Henchman =10 1
+    - command eb_boss_killtype_Brewer =10 1
+    - command eb_boss_killtype_SpiderQueen =10 1
+    - command eb_boss_killtype_ThreeFingerHobb =10 1
+    - command eb_boss_killtype_magmacube =10 1
+    - command eb_boss_killtype_Archer =10 1
+    - command eb_boss_killtype_HenchCow =10 1
+    - command eb_boss_killtype_BrewerCow =10 1
+    - command eb_boss_killtype_SpiderCow =10 1
+    - command eb_boss_killtype_HobbCow =10 1
+    - command eb_boss_spawn_Hunter_c1 =10 1
   Hunter:
     Type: skeleton
     Health: 150
+    #showhp makes the spammy chat messages that were replaced when HP went over heads
     Showhp: false
     Damage: 5
     Skills:
     - dragin 20 =140 1
+    #local chat message 25 block radious
     - bossmsg 25:&bIt_wont_be_that&2Easy =5 1
+    #spawn bosstype archer when hp is 5
     - swarm $Archer:4 =5 1
+    # run the command /eb boss spawn Henchman c2 at 0 hp 100% of the time
     - command eb_boss_spawn_Henchman_c2 =0 1
     Drops:
+    #no drop items, still a low random chance to drop them, will be damaged
     - 261:0:1:0 0 ARROW_DAMAGE:2,ARROW_KNOCKBACK:1 $&ano_drop_bow
     - 298:255,255,255:1:4 0 PROTECTION_PROJECTILE:4 $&ano_drop_helm
     - 301:255,255,255:1:1 0 PROTECTION_PROJECTILE:4 $&ano_drop_Boots
@@ -22,11 +46,14 @@ Bosses:
     - dragin 20 =220 1
     - bossmsg 25:&bHave_you_met_my_&4friends? =225 1
     - swarm $Archer:2 =225 1
+    #set aura to be fire particles
     - effect fire
+    #when health is >0 throw players in a 10 block radious level 1 15% of the time
     - throw 10:1 >0 0.15
     - potion 20:WEAKNESS:20:2 >0 0.12
     - bossmsg 25:&bHave_you_met_my_&4friends? =225 1
     - swarm $Archer:2 =50 1
+    #send message to the server that a player has killed the boss at 0 hp
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_HenchCow_cl1 =0 1
     Drops:
@@ -42,9 +69,11 @@ Bosses:
     - dragin 20 =190 1
     - swarm $magmacube:1 /190-50 0.3
     - bossmsg 25:&bCome_get_your_&2Medicine! =100 1
+    #potion on players radius:type:duration:level hp chance
     - potion 25:POISON:5:1 =100 1
     - bossmsg 25:&bCome_get_your_&2Medicine! =25 1
     - potion 25:POISON:5:2 =25 1
+    #potions on self, type:duration:level HP chance
     - potionboss SPEED:30:2 >0 0.3
     - potionboss HEAL:1:2 >0 0.3
     - potionboss REGENERATION:30:2 =85 1
@@ -122,6 +151,7 @@ Bosses:
     Skills:
     - command eb_boss_spawn_SpiderQueen_c5 =0 1
     Drops:
+    #easier to have potions here as phatloot doesnt handle them so well
     - 373:16385:2 0.5
     - 373:16386:2 0.5
     - 373:16385:2 0.5
@@ -140,23 +170,8 @@ Bosses:
     Damage: 1
     Skills:
     - command eb_boss_spawn_Brewer_c4 =0 1
-  cStart:
-    Type: villager
-    Health: 20
-    Damage: 0
-    Skills:
-    - command eb_boss_killtype_Hunter =10 1
-    - command eb_boss_killtype_Henchman =10 1
-    - command eb_boss_killtype_Brewer =10 1
-    - command eb_boss_killtype_SpiderQueen =10 1
-    - command eb_boss_killtype_ThreeFingerHobb =10 1
-    - command eb_boss_killtype_magmacube =10 1
-    - command eb_boss_killtype_Archer =10 1
-    - command eb_boss_killtype_HenchCow =10 1
-    - command eb_boss_killtype_BrewerCow =10 1
-    - command eb_boss_killtype_SpiderCow =10 1
-    - command eb_boss_killtype_HobbCow =10 1
-    - command eb_boss_spawn_Hunter_c1 =10 1
+  #this boss has all the items from the dungeon for testing purposes, 
+  #this is legacy of how i had to do it before phatloot and lores  
   D1:
     Type: villager
     Health: 5
@@ -182,6 +197,8 @@ Bosses:
     - 261:0:1 1 ARROW_DAMAGE:2,DURABILITY:2 $&aBow_of_Power_+2
     - 267:0:1 1 DAMAGE_ALL:4,DURABILITY:4,FIRE_ASPECT:3 $&dSharp_Blade_of_Fire
     - 273:0:1 1 DURABILITY:4,FIRE_ASPECT:2,DIG_SPEED:3 $&9Hobbs_Fourth_Finger
+  #The Transformed
+  #tstart was going to spawn the beach bosses, legacy
   tStart:
     Type: villager
     Health: 20
@@ -195,6 +212,7 @@ Bosses:
     Showhp: false
     Damage: 0
     Skills:
+    #this message comes up when the boss spawns, it also works when it "pops" on loading the chunk
     - bossmsg 25:&7psst..Traveller..over_here! =5 1
     - bossmsg 25:&7for_a_start_keep_your_voices_down!_you_do_not_want_to_wake_them =1 1
     - command eb_boss_spawn_TransformedVillager_sc1 =0 1
@@ -231,6 +249,7 @@ Bosses:
     Health: 20
     Damage: 0
     Skills:
+    #set at 19 hp so you hit it before they say it
     - bossmsg 25:&bWhere_have_my_friends_gone? =19 1
     - command eb_boss_spawn_RobTransformed_sc2 =0 1
   RobTransformed:
@@ -258,6 +277,7 @@ Bosses:
     - command eb_boss_spawn_rf1_sc2-3 =50 1
     - command eb_boss_spawn_rf1_sc2-4 =50 1
     - potionboss INCREASE_DAMAGE:30:1 =125 1
+    #you can cast potions on players that can benefit them
     - potion 20:INCREASE_DAMAGE:30:3 =125 1
     - command eb_boss_spawn_RobCow_sc2 =0 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
@@ -271,6 +291,7 @@ Bosses:
     Damage: 0
     Drops:
     - exp 125
+  #the 8 low ranked zombies that spawn in the houses
   SCZombie:
     Type: zombie
     Health: 50
@@ -281,6 +302,7 @@ Bosses:
     Showhp: false
     Damage: 2
     Skills:
+    #make sure to kill the necro when it spawns.
     - command eb_boss_killtype_Necro =1000 1
     - dragin 20 =790 1
     - bossmsg 25:&bThe_Necromancer_Does_Not_Wish_to_&cBE_DISTURBED =999 1
@@ -295,6 +317,7 @@ Bosses:
     - bossmsg 25:&cLeave_This_Place&7! =110 1
     - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
     - command eb_boss_spawn_GuardCow_sc-t1 =0 1
+    #not sure why this wasnt put on the cow
     - command eb_boss_spawn_Necro_sc-t2 =0 1
   GuardCow:
     Type: cow
@@ -315,9 +338,11 @@ Bosses:
     - dragin 20 =390 1
     - dragin 20 =190 1
     - potionboss SPEED:30:4 >0 0.5
+    #on each hit there is 10% chance to spawn a skeleton when above 500 hp
     - swarm skeleton:1 >500 0.1
     - swarm zombie:1 >500 0.1
     - swarm witherskeleton:1 >500 0.1
+    #on each hit there is a 10% chance to spawn 2 skeletons when below 500hp
     - swarm skeleton:2 <500 0.1
     - swarm zombie:2 <500 0.1
     - swarm witherskeleton:2 <500 0.1
@@ -327,6 +352,7 @@ Bosses:
     Type: cow
     Health: 20
     Damage: 0
+  #all loot from the transformed, legacy
   AllTv:
     Type: cow
     Health: 5
@@ -355,11 +381,13 @@ Bosses:
     - 258:0:1 1 DURABILITY:4,DIG_SPEED:3 $&9Robs_Efficient_Axe
     - 304:0:1 1 DURABILITY:4, $&aRobs_Enchanted_Chain_Leggings
     - 403:0:1 1 DAMAGE_UNDEAD:3,DURABILITY:2 $&9The_Undead_and_You,_How_To_Survive
+  #test boss
   WitherBoss:
     Type: creeper
     Health: 120
     Showhp: false
     Damage: 0
+  #farm animals
   Cow:
     Type: cow
     Health: 5
@@ -368,6 +396,8 @@ Bosses:
     Type: sheep
     Health: 5
     Damage: 0
+  #warlord
+  #villager that starts the warlord
   WarVil:
     Type: villager
     Health: 20
@@ -441,6 +471,7 @@ Bosses:
     Health: 200
     Showhp: false
     Skills:
+    #use swarm here so the new boss takes the current place when it dies
     - swarm $AngryMasterOfArms:1 =0 1
     - potionboss SPEED:300:1 =199 1
     Drops:
@@ -481,7 +512,9 @@ Bosses:
     Damage: 5
     Skills:
     - command eb_boss_spawn_WarlordsAlchemist_wl-alc-b =0 1
+    
   WarlordsAlchemist:
+    #used to be a villager but it ran away too much. easier to kill the blaze in the hut
     Type: witch
     Damage: 2
     Health: 50
@@ -545,6 +578,7 @@ Bosses:
     Type: cow
     Health: 2
     Damage: 0
+  #this is my testing cow, I load drop up on this to get the enchants i want.
   tCow:
     Type: cow
     Health: 2
