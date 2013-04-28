@@ -1,0 +1,174 @@
+Bosses:  
+  WarVil:
+    Type: villager
+    Health: 20
+    Damage: 0
+    Skills:
+    - command eb_boss_killtype_GateKeeper =10 1
+    - command eb_boss_killtype_GateArcher =10 1
+    - command eb_boss_killtype_MasterOfArms =10 1
+    - command eb_boss_killtype_AngryMasterOfArms =10 1
+    - command eb_boss_killtype_EnragedMasterOfArms =10 1
+    - command eb_boss_killtype_WarlordsAlchemist =10 1
+    - command eb_boss_killtype_AlchemistsTrueForm =10 1
+    - command eb_boss_killtype_Warlord =10 1
+    - command eb_boss_killtype_WarDog =10 1
+    - command eb_boss_killtype_GateCow =10 1
+    - command eb_boss_killtype_MoaCow =10 1
+    - command eb_boss_killtype_AlcCow =10 1
+    - command eb_boss_killtype_WarCow =10 1
+    - command eb_boss_spawn_GateKeeper_wl-gate-b =0 1
+  GateKeeper:
+    Type: zombie
+    Health: 1250
+    Showhp: false
+    Damage: 10
+    Skills:
+    - command eb_boss_spawn_GateArcher_wl-gate-b-a1 =1240 1
+    - command eb_boss_spawn_GateArcher_wl-gate-b-a2 =1240 1
+    - potionboss SPEED:300:5 =500 1
+    - potionboss INCREASE_DAMAGE:300:5 =500 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    - command eb_boss_spawn_GateCow_wl-gate-b =0 1
+    Drops:
+    - 272:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+  GateArcher:
+    Type: skeleton
+    Health: 300
+    Damage: 1
+    Skills:
+    - potionboss SPEED:300:5 =150 1
+    - potionboss INCREASE_DAMAGE:300:5 =150 1
+    Drops:
+    - 261:0:1:0 0 ARROW_DAMAGE:2,ARROW_FIRE:1 $&ano_drop_bow
+    - 298:20,20,255:1:4 0
+    - 299:20,20,255:1:3 0
+    - 300:20,20,255:1:2 0
+    - 301:20,20,255:1:1 0
+  GateCow:
+    Type: cow
+    Health: 2
+    Damage: 5
+    Skills:
+    - command eb_boss_spawn_MasterOfArms_wl-arm =0 1
+  WallArcher:
+    Type: skeleton
+    Health: 150
+    Damage: 1
+    Skills:
+    - potionboss SPEED:300:5 =150 1
+    - potionboss INCREASE_DAMAGE:300:5 =150 1
+    Drops:
+    - 261:0:1:0 0 ARROW_DAMAGE:2 $&ano_drop_bow
+    - 298:50,50,200:1:4 0
+    - 299:50,50,200:1:3 0
+    - 300:50,50,200:1:2 0
+    - 301:50,50,200:1:1 0
+  MasterOfArms:
+    Type: zombie
+    Damage: 5
+    Health: 200
+    Showhp: false
+    Skills:
+    - swarm $AngryMasterOfArms:1 =0 1
+    - potionboss SPEED:300:1 =199 1
+    Drops:
+    - 272:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+    - 308:0:1:2 0
+  AngryMasterOfArms:
+    Type: zombie
+    Damage: 10
+    Health: 200
+    Showhp: false
+    Skills:
+    - swarm $EnragedMasterOfArms:1 =0 1
+    - potionboss SPEED:300:5 =199 1
+    Drops:
+    - 258:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+    - 308:0:1:2 0
+  EnragedMasterOfArms:
+    Type: zombie
+    Damage: 15
+    Health: 600
+    Showhp: false
+    Skills:
+    - command eb_boss_spawn_MoaCow_wl-arm =0 1
+    - potionboss SPEED:300:5 =500 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    Drops:
+    - 267:0:1:0 0 DURABILITY:4 $&aPoker_noDrop
+    - 306:0:1:4 0
+    - 307:0:1:3 0
+    - 308:0:1:2 0
+  MoaCow:
+    Type: cow
+    Health: 2
+    Damage: 5
+    Skills:
+    - command eb_boss_spawn_WarlordsAlchemist_wl-alc-b =0 1
+  WarlordsAlchemist:
+    Type: witch
+    Damage: 2
+    Health: 50
+    Showhp: false
+    Skills:
+    - swarm $AlchemistsTrueForm:1 =0 1
+  AlchemistsTrueForm:
+    Type: blaze
+    Damage: 10
+    Health: 1000
+    Showhp: false
+    Skills:
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+    - command eb_boss_spawn_AlcCow_wl-alc =0 1
+    - lightning 5:5 >500 0.3
+    - lightning 5:8 <500 0.3
+  AlcCow:
+    Type: cow
+    Damage: 0
+    Health: 20
+    Skills:
+    - command eb_boss_spawn_Warlord_wl-lord-b =0 1
+  Warlord:
+    Type: pigzombie
+    Health: 1500
+    Damage: 15
+    Skills:
+    - swarm $WarDog:2 =1499 1
+    - swarm $WarDog:2 =699 1
+    - bossmsg 0:&b$player_has_killed_the_&4$boss! =0 1
+    - command eb_boss_spawn_WarCow_wl-lord-b =0 1
+    Drops:
+    - 267:0:1:0 0 $&anodropsword
+    - 306:0:1:4 0 $&anodrophelm
+    - 307:0:1:3 0 $&anodropchest
+  WarDog:
+    Type: angrywolf
+    Damage: 5
+    Health: 100
+    Drops:
+    - exp 50
+  WarCow:
+    Type: cow
+    Damage: 0
+    Health: 20
+  EscapedConvict:
+    Type: zombie
+    Health: 250
+    Damage: 5
+    Skills:
+    - bossmsg 0:&9$player_&2has_found_an_&b$boss! =240 1
+    - bossmsg 25:&aYou_will_&cNOT_&aSend_me_back_&b$player! =100 1
+    - bossmsg 25:&aIt_will_&cNOT_&aend_like_&3THIS! =25 1
+    - swarm $Convict:1 =0 0.6
+    Drops:
+    - exp 100
+    - 267:0:1:0 0 $&anodropsword
+    - 306:0:1:4 0 $&anodrophelm
+    - 307:0:1:3 0 $&anodropchest
