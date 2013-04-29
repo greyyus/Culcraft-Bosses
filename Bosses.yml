@@ -584,3 +584,28 @@ Bosses:
     Health: 2
     Damage: 0
     Drops:
+  #Jerry the Giant- submitted by Greyyus.
+  Jerry:
+    Type: Giant
+    Health: 2500
+    Showhp: false
+    Damage: 25
+    Skills:
+    - swarm zombiebaby:10 = 2000 1
+    - swarm zombiebaby:10 = 1500 1
+    - swarm zombiebaby:10 = 1000 1
+    - swarm zombiebaby:10 = 500 1
+    - swarm zombiebaby:10 = 0 1
+    - bossmsg 2000:&bOW_THAT_&2HURT_! =100 1
+    - potion 2000:POISON:5:1 =100 1
+    - bossmsg 2000:&bOW_THAT_&2HURT_! =100 1
+    - bossmsg 1500:&bOW_THAT_&2HURT_! =100 1
+    - potion 1500:POISON:5:1 =100 1
+    - bossmsg 1500:&bOW_THAT_&2HURT_! =100 1 
+    - bossmsg 1000:&bOW_THAT_&2HURT_! =100 1
+    - potion 1000:POISON:5:1 =100 1
+    - bossmsg 1000:&bOW_THAT_&2HURT_! =100 1
+    - bossmsg 500:&bOW_THAT_&2HURT_! =100 1
+    - potion 500:POISON:5:1 =100 1
+    - bossmsg 500:&bOW_THAT_&2HURT_! =100 1
+    - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
