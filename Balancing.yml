@@ -130,3 +130,114 @@ The Cave: 5 bosses.
       Type: Iron Boots
       Enchants:
       - Protection II
+The Transformed: 4 bosses.
+  Weapons:
+    Bane_of_the_Transformed:
+      Color: Blue
+      Type: Iron Sword
+      Enchants:
+      - DAMAGE_UNDEAD V
+      - DURABILITY II
+  Armor:
+    Guards_Chain_Helm:
+      Color: Green
+      Type: Chain Helm
+      Enchants:
+      - DURABILITY IV
+    Guards_Chain_Boots:
+      Color: Green
+      Type: Chain Boots
+      Enchants:
+      - DURABILITY IV
+    Guards_Rare_Helm:
+      Color: Blue
+      Type: Chain Helm
+      Enchants:
+      - DURABILITY IV
+      - PROTECTION_FALL V
+      - THORNS II
+    Guards_Rare_Boots:
+      Color: Blue
+      Type: Chain Boots
+      Enchants:
+      - DURABILITY IV
+      - PROTECTION_FALL V
+      - THORNS II
+    Niles_Enchanted_Chain_Chest:
+      Color: Green
+      Type: Chain Chest
+      Enchants:
+      - DURABILITY IV
+    Robs_Enchanted_Chain_Leggings:
+      Color: Green
+      Type: Chain Legs
+      Enchants:
+      - DURABILITY IV
+    Helm_of_Lost_Souls:
+      Color: Pink
+      Type: Chain Helm
+      Enchants:
+      - DURABILITY VIII
+      - PROTECTION_ENVIRONMENTAL IV
+      - OXYGEN III
+    Chest_of_Broken_Hearts:
+      Color: Pink
+      Type: Chain Chest
+      Enchants:
+      - DURABILITY VIII
+      - PROTECTION_ENVIRONMENTAL IV
+      - THORNS III
+    Leggings_of_the_Stolen:
+      Color: Pink
+      Type: Chain legs
+      Enchants:
+      - DURABILITY VIII
+      - PROTECTION_ENVIRONMENTAL IV
+      - Water Worker III
+    Boots_of_the_Forgotten:
+      Color: Pink
+      Type: Chain Boots
+      Enchants:
+      - DURABILITY VIII
+      - PROTECTION_ENVIRONMENTAL IV
+      - Protection Fall III
+  Tools:
+    Niles_Efficient_Pick:
+      Color: Blue
+      Type: Iron Pickaxe
+      Enchants:
+      - DURABILITY IV
+      - Dig Speed III
+    Robs_Efficient_Axe:
+      Color: Blue
+      Type: Iron Axe
+      Enchants:
+      - DURABILITY IV
+      - Dig Speed III
+  Other:
+    The_Undead_and_You,_How_To_Survive:
+      Color: Blue
+      Type: Enchanted Book
+      Enchants:
+      - DAMAGE_UNDEAD III
+      - DURABILITY II
+    Water Breathing III:
+      Color: Blue
+      Type: Enchanted Book
+      Enchants:
+      - OXYGEN III
+    Thorns III:
+      Color: Blue
+      Type: Enchanted Book
+      Enchants:
+      - Thorns III
+    Aqua Affinity III:
+      Color: Blue
+      Type: Enchanted Book
+      Enchants:
+      - Aqua Affinity III
+    Feather Falling III:
+      Color: Blue
+      Type: Enchanted Book
+      Enchants:
+      - Feather Falling III
