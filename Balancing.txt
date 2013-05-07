@@ -1,0 +1,73 @@
+this file will outline where we are headding with items on the server.
+
+The Cave: 5 bosses.
+  Weapons:
+    Stone Fire Poker: 
+      Color: Green
+      Type: Stone Sword
+      Enchants:
+      - Fire Aspect I
+      - Durability IV
+    Henchmans Sharp Blade
+      Color: Blue
+      Type: Iron Sword
+      Enchants:
+      - Sharpness II
+      - Durability II
+    Large_Axe_of_Knockback:
+      Color: Blue
+      Type: Iron Axe
+      Enchants:
+      - Knockback II
+      - Sharpness II  
+    Bow of Power +2:
+      Color: Green
+      Type: Bow
+      Enchants: 
+      - Power II 
+      - Durability II
+    Brewers_Wooden_Sceptre:
+      Color: Pink
+      Type: Stick
+      Enchants:
+      - Efficiency X
+      - Knockback II
+      - Sharpness II
+      Lore:
+      - 1-3 Damage
+    Spider_Queens_Crystal_Fang:
+      Color: Blue
+      Type: Diamond Sword
+      Enchants:
+      - bane of Arthropods II
+      - Looting II
+    Sharp_Blade_of_Fire:
+      Color: Pink
+      Type: Iron Sword
+      Enchants:
+      - Sharpness IV
+      - Fire Aspect III
+    Hobbs_Fourth_Finger:
+      Color: Blue
+      Type: Iron Shovel
+      Enchants:
+      - DURABILITY IV
+      - FIRE_ASPECT II
+      - DIG_SPEED III
+
+
+
+
+- 298:255,255,255:1 1 PROTECTION_PROJECTILE:4 $&aSkeletons_Leather_Cap
+    - 301:255,255,255:1 1 PROTECTION_PROJECTILE:4 $&aSkeletons_Leather_Boots
+    - 299:200,200,200:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:4,THORNS:2 $&9White_Leather_Chest_of_Thorns_+2
+    - 300:200,200,200:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:4,THORNS:2 $&9White_Leather_Leggings_of_Thorns_+2
+    - 298:0:1 1 PROTECTION_FIRE:2,PROTECTION_ENVIRONMENTAL:2,DURABILITY:2 $&9Leather_Cap_of_Arcane
+    - 307:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,THORNS:2 $&dGlowing_Iron_Chest
+    - 309:0:1 1 DURABILITY:4,PROTECTION_ENVIRONMENTAL:3,THORNS:2 $&dGlowing_Iron_Boots
+    - 306:0:1 1 DURABILITY:2,PROTECTION_FIRE:1 $&aChefs_Hat
+    - 308:0:1 1 DURABILITY:2,PROTECTION_FIRE:1 $&aChefs_Pants
+    - 307:0:1 1 PROTECTION_FIRE:2,PROTECTION_ENVIRONMENTAL:2,DURABILITY:2 $&9Iron_Chest_of_Arcane_Protection
+    - 307:0:1 1 PROTECTION_ENVIRONMENTAL:4,DURABILITY:2 $&9Iron_Chest_of_Lasting
+    - 309:0:1 1 PROTECTION_ENVIRONMENTAL:2 $&aIron_Boots_+2
+  
