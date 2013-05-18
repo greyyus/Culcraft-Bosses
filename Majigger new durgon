@@ -1,0 +1,65 @@
+#The dragons lair
+Bosses:
+ #
+
+ Keeper:
+  Type: giant
+  Health: 1500
+  Damage: 0
+  Skills:
+  - bossmsg 25:&bHey_Slagathors_._._._FRESH_&4MEAT! =1500 1
+  - swarm $GatekeepersInterns:10 = 1500 1
+  - bossmsg 25:&bNeed_some_help_4&here! =1000 1
+  - swarm $GatekeepersInterns:10 = 1000 1
+  - bossmsg 25:&bNeed_some_help_4&here! =1000 1
+  - swarm $GatekeepersInterns:10 = 500 1
+  - bossmsg 25:&bFINISH_THEM_OFF_FOR_&4ME! =0 1
+  - swarm $GatekeepersInterns:20 = 0 1
+  - bossmsg 0:&b$player_has_killed_&4$boss! =0 1
+  - command eb_boss_spawn_HighPriest_c1=0 1
+   #insert trashmobs for way in here?
+ GatekeepersInterns: 
+  Type: zombie 
+  Health:100  
+  Damage:8
+  Skills:
+  - potionboss:speed:60:2: >100 1
+  #Lets have him in like a chapel or some shit
+ HighPriest:
+  Type: witherskeleton
+  Health: 850
+  Damage: 10
+  Skills:
+  - bossmsg 25:&bAll_HAIL_THE_&4$DRAGONESS! =850 1
+  - dragin 15 =700 1
+  - dragin 25 =500 1
+  - dragin 35 =350 1
+  - potionboss:strength:1:600 >350 1
+  - potionboss:speed:2:600>350 1
+  - dragin 45 =50 1
+  - bossmsg 25:&bNO_NO_&4$NOOOOOOOOOOOOOOOOOOOOOOOOO! =0 1
+  - swarm EnragedHighPriest:1 = 0 1
+  # He needs white armor for origional then red for engraged
+ EnragedHighPriest:
+  Type: zombie
+  Health: 1000
+  Damage: 10
+  Skills:
+  - bossmsg 25:&bTHE_ACTUAL_FUCK_4&MAN! = 1000 1
+  - potionboss:speed:4:600> 999 1
+  - dragin 45= 1000 1
+  - swarm: $Acolyte:3 = 900
+  - potion 25:POISON:5:1 = 900 1 
+  - swarm: $Acolyte:3 = 500
+  - potion 25:POISON:5:1 = 500 1 
+  - swarm: $Acolyte:3 = 200
+  - potion 25:POISON:5:1 = 200 1 
+  #acolytes in white leather HIgh priest in iron
+  #spawns loot cow
+ Acolyte:
+  Type: witherskelton
+  Health: 250
+  Damage: 7
+  Skills:
+  - potionboss:resistance:1:600>250 1
+  - potionboss:speed:1:600>250 1
